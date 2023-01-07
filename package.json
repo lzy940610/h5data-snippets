@@ -4,6 +4,7 @@
   "description": "Code snippets for h5data",
   "version": "0.0.1",
   "publisher": "lzy940610",
+  "icon": "",
   "engines": {
     "vscode": "^1.74.0"
   },
