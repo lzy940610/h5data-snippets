@@ -1,16 +1,23 @@
 {
   "name": "h5data-snippets",
   "displayName": "H5data Snippets",
-  "description": "Code snippets for h5data",
   "version": "0.0.1",
   "publisher": "lzy940610",
-  "icon": "images/icon.jpeg",
-  "engines": {
-    "vscode": "^1.74.0"
+  "description": "Code snippets for h5data",
+  "author": {
+    "name": "lzy940610"
   },
   "categories": [
     "Snippets"
   ],
+  "icon": "images/icon.jpeg",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
   "contributes": {
     "snippets": [
       {
@@ -22,5 +29,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/lzy940610/h5data-snippets"
-  }
+  },
+  "homepage": "https://github.com/lzy940610/h5data-snippets/blob/main/README.md"
 }
