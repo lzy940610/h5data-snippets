@@ -1,6 +1,6 @@
 {
   "name": "h5data-snippets",
-  "displayName": "H5data Snippets",
+  "displayName": "H5Data Snippets",
   "version": "0.0.1",
   "publisher": "lzy940610",
   "description": "Code snippets for h5data",
@@ -11,10 +11,6 @@
     "Snippets"
   ],
   "icon": "images/icon.jpeg",
-  "galleryBanner": {
-    "color": "#C80000",
-    "theme": "dark"
-  },
   "engines": {
     "vscode": "^1.74.0"
   },
