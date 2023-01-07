@@ -4,7 +4,7 @@
   "description": "Code snippets for h5data",
   "version": "0.0.1",
   "publisher": "lzy940610",
-  "icon": "",
+  "icon": "images/icon.jpeg",
   "engines": {
     "vscode": "^1.74.0"
   },
@@ -18,5 +18,9 @@
         "path": "./snippets/snippets.code-snippets"
       }
     ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lzy940610/h5data-snippets"
   }
 }
