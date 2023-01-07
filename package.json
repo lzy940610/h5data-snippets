@@ -1,0 +1,20 @@
+{
+  "name": "h5data-snippets",
+  "displayName": "h5data-snippets",
+  "description": "Code snippets for h5data",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescriptreact",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
