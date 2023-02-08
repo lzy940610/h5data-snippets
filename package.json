@@ -1,30 +1,57 @@
 {
   "name": "h5data-snippets",
   "displayName": "H5Data Snippets",
+  "description": "Code snippets for h5data",
+  "icon": "images/icon.jpeg",
   "version": "0.1.0",
   "publisher": "lzy940610",
-  "description": "Code snippets for h5data",
-  "author": {
-    "name": "lzy940610"
-  },
-  "categories": [
-    "Snippets"
-  ],
-  "icon": "images/icon.jpeg",
-  "engines": {
-    "vscode": "^1.74.0"
-  },
-  "contributes": {
-    "snippets": [
-      {
-        "language": "typescriptreact",
-        "path": "./snippets/snippets.code-snippets"
-      }
-    ]
-  },
+  "homepage": "https://github.com/lzy940610/h5data-snippets/blob/main/README.md",
   "repository": {
     "type": "git",
     "url": "https://github.com/lzy940610/h5data-snippets"
   },
-  "homepage": "https://github.com/lzy940610/h5data-snippets/blob/main/README.md"
+  "author": {
+    "name": "lzy940610"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Snippets",
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescriptreact",
+        "path": "./src/snippets"
+      }
+    ],
+    "commands": [
+			{
+				"command": "extension.helloWorld",
+				"title": "Hello World"
+			}
+		]
+  },
+  "scripts": {
+    "dev": "tsc -watch -p ./",
+    "compile": "tsc -p ./",
+    "lint": "eslint \"src/**/*.ts\"",
+    "vscode:prepublish": "npm run compile",
+    "package:pre": "vsce package --pre-release",
+    "package": "vsce package",
+    "publish:pre": "package:pre && vsce publish --pre-release",
+    "publish": "package && vsce publish"
+  },
+  "devDependencies": {
+    "@types/node": "^18.13.0",
+    "@types/vscode": "^1.75.0",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "eslint": "^8.33.0",
+    "typescript": "^4.9.5"
+  }
 }
