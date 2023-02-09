@@ -4,6 +4,7 @@ exports.activate = void 0;
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 const vscode = require("vscode");
+const template_1 = require("./template");
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 function activate(context) {
@@ -16,9 +17,44 @@ function activate(context) {
     const disposable = vscode.commands.registerCommand('extension.helloWorld', () => {
         // The code you place here will be executed every time your command is executed
         // Display a message box to the user
-        vscode.window.showInformationMessage('Hello World!');
+        vscode.window.showInformationMessage('Hello World!??');
+        const editor = vscode.window.activeTextEditor;
+        if (editor) {
+            const lineNum = 0;
+            const tpl = template_1.PAGE;
+            editor.edit((editBuilder) => {
+                editBuilder.insert(new vscode.Position(lineNum, 0), tpl); // 插入
+                setTimeout(() => {
+                    editor.document.save();
+                }, 200);
+            });
+        }
+        else {
+            vscode.window.showErrorMessage('请在文件中执行命令～');
+        }
+    });
+    const hoc = vscode.commands.registerCommand('extension.hoc', () => {
+        // The code you place here will be executed every time your command is executed
+        console.log('??');
+        // Display a message box to the user
+        // vscode.window.showInformationMessage('Hello World!');
+        const editor = vscode.window.activeTextEditor;
+        if (editor) {
+            const lineNum = 0;
+            const tpl = template_1.PAGE;
+            editor.edit((editBuilder) => {
+                editBuilder.insert(new vscode.Position(lineNum, 0), tpl); // 插入
+                setTimeout(() => {
+                    editor.document.save();
+                }, 200);
+            });
+        }
+        else {
+            vscode.window.showErrorMessage('请在文件中执行命令～');
+        }
     });
     context.subscriptions.push(disposable);
+    context.subscriptions.push(hoc);
 }
 exports.activate = activate;
 //# sourceMappingURL=extension.js.map

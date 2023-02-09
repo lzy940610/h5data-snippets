@@ -26,13 +26,17 @@
     "snippets": [
       {
         "language": "typescriptreact",
-        "path": "./src/snippets"
+        "path": "./src/snippets.json"
       }
     ],
     "commands": [
 			{
 				"command": "extension.helloWorld",
 				"title": "Hello World"
+			},
+      {
+				"command": "extension.hoc",
+				"title": "生成页面模版（HOC）"
 			}
 		]
   },
