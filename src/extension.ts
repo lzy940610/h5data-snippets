@@ -13,35 +13,8 @@ export function activate(context: vscode.ExtensionContext) {
 	// The command has been defined in the package.json file
 	// Now provide the implementation of the command with registerCommand
 	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('extension.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World!??');
-
-		const editor = vscode.window.activeTextEditor;
-
-		if (editor) {
-			const lineNum = 0;
-			const tpl = PAGE;
-
-			editor.edit((editBuilder) => {
-				
-				editBuilder.insert(new vscode.Position(lineNum, 0), tpl) // 插入
-				setTimeout(() => {
-					editor.document.save()
-				}, 200)
-			})
-
-		} else {
-			vscode.window.showErrorMessage('请在文件中执行命令～');
-		}
-		
-	});
-
 	const hoc = vscode.commands.registerCommand('extension.hoc', () => {
 		// The code you place here will be executed every time your command is executed
-		console.log('??')
 		// Display a message box to the user
 		// vscode.window.showInformationMessage('Hello World!');
 		const editor = vscode.window.activeTextEditor;
@@ -61,11 +34,9 @@ export function activate(context: vscode.ExtensionContext) {
 		} else {
 			vscode.window.showErrorMessage('请在文件中执行命令～');
 		}
-	
 
 	});
 
-	context.subscriptions.push(disposable);
 	context.subscriptions.push(hoc);
 }
 
